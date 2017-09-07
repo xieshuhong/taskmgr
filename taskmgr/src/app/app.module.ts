@@ -23,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TaskModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [TaskModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
