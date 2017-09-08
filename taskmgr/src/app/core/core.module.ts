@@ -8,16 +8,23 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { loadSvgResources } from "../utils/svg.util";
 import { SharedModule } from "../shared/shared.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppRoutingModule } from '../app-routing.module';
 import 'hammerjs';
 
 @NgModule({
   imports: [
     HttpModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   declarations: [HeaderComponent,FooterComponent, SidebarComponent],
-  exports: [HeaderComponent,FooterComponent, SidebarComponent]
+  exports: [  HeaderComponent,
+              FooterComponent, 
+              SidebarComponent, 
+              AppRoutingModule,
+              BrowserAnimationsModule
+            ]
 })
 export class CoreModule {
    constructor(@SkipSelf() @Optional() parent:CoreModule, 

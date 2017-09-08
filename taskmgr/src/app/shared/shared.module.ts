@@ -1,6 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdToolbarModule, MdIconModule, MdButtonModule, MdCardModule, MdInputModule, MdListModule, MdSlideToggleModule, MdGridListModule, MdDialogModule, MdAutocompleteModule, MdMenuModule, MdCheckboxModule, MdTooltipModule, MdDatepickerModule, MdRadioModule, MdNativeDateModule, MdSelectModule } from '@angular/material';
+import { MdToolbarModule, 
+         MdIconModule, 
+         MdButtonModule, 
+         MdCardModule, 
+         MdInputModule, 
+         MdListModule, 
+         MdSlideToggleModule, 
+         MdGridListModule, 
+         MdDialogModule, 
+         MdAutocompleteModule, 
+         MdMenuModule, 
+         MdCheckboxModule, 
+         MdTooltipModule, 
+         MdDatepickerModule, 
+         MdRadioModule, 
+         MdNativeDateModule, 
+         MdSelectModule,
+         MdSidenavModule } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
@@ -22,7 +39,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MdNativeDateModule,    
     MdDatepickerModule,
     MdRadioModule,
-    MdSelectModule
+    MdSelectModule,
+    MdSidenavModule,
   ],
   exports:[
     CommonModule,
@@ -42,7 +60,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MdNativeDateModule,    
     MdDatepickerModule,
     MdRadioModule,
-    MdSelectModule
+    MdSelectModule,
+    MdSidenavModule
   ],
   entryComponents: [ConfirmDialogComponent],
   declarations: [ConfirmDialogComponent]
