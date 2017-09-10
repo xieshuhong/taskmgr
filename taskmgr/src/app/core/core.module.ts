@@ -10,6 +10,7 @@ import { SharedModule } from "../shared/shared.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from '../app-routing.module';
 import 'hammerjs';
+import 'rxjs/add/operator/take';
 
 @NgModule({
   imports: [
@@ -24,7 +25,10 @@ import 'hammerjs';
               SidebarComponent, 
               AppRoutingModule,
               BrowserAnimationsModule
-            ]
+            ],
+  providers: [
+    {provide: 'BASE_CONFIG', useValue: 'http://localhost:3000'}
+  ]
 })
 export class CoreModule {
    constructor(@SkipSelf() @Optional() parent:CoreModule, 

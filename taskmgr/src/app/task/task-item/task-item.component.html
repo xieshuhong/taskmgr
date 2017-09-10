@@ -4,10 +4,16 @@
              'priority-important': item.priority === 2,
              'priority-emergency': item.priority === 1
             }"
+ [app-draggable] = "true"
+ [dragTag] = "'task-item'" 
+ [draggedClass] = "'drag-start'"
+ [dragData] = "item"
  (click)="onItemClick()"
 >
             
-  <md-checkbox class="completion-status" [checked]="item.completed"
+  <md-checkbox 
+  class="completion-status" 
+  [checked]="item.completed"
   (click)="onCheckBoxClick($event)"
    >
   </md-checkbox>

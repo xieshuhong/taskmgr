@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { OverlayContainer } from "@angular/material";
 import { trigger, state, transition, style, animate, keyframes } from '@angular/animations'
 
@@ -12,7 +12,8 @@ export class AppComponent {
   darkTheme = false;
   squareState:string; 
 
-  constructor(private oc:OverlayContainer){
+  constructor(private oc:OverlayContainer, @Inject('BASE_CONFIG') config){
+    console.log(config);
     
   }
 
