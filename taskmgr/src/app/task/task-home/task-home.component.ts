@@ -27,6 +27,7 @@ export class TaskHomeComponent implements OnInit {
     {
       id:1,
       name:'待办',
+      order: 1,
       tasks: [
                   {
                     id:1,
@@ -57,7 +58,40 @@ export class TaskHomeComponent implements OnInit {
     },
     {
       id:1,
-      name:'待办',
+      name:'待做',
+      order: 2,      
+      tasks: [
+                  {
+                    id:1,
+                    desc:'任务一:去星巴克买杯咖啡',
+                    completed:true,
+                    priority: 1,                    
+                    owner:{
+                      id:1,
+                      name:'张三',
+                      avatar:'avatars:svg-11'
+                    },
+                    dueDate: new Date(),
+                  },
+                  {
+                    id:2,
+                    desc:'任务二:完成老师布置的ppt作业',
+                    completed:false,
+                    priority: 2,                    
+                    owner:{
+                      id:1,
+                      name:'李四',
+                      avatar:'avatars:svg-12'
+                    },
+                    dueDate: new Date(),
+                    reminder: new Date()
+                  }
+      ]
+    },
+    {
+      id:1,
+      name:'已完成',
+      order: 3,      
       tasks: [
                   {
                     id:1,
@@ -123,10 +157,18 @@ export class TaskHomeComponent implements OnInit {
          break;
          case 'task-list':
          console.log('handling list');
+         const scrList = srcData.data;
+         const tempOrder = scrList.order;
+         scrList.order = list.order;
+         list.order = tempOrder;
          break;
          default:
          break;
       }
+  }
+
+  handleQuickTask(desc:string) {
+     console.log(desc);
   }
 
 }
